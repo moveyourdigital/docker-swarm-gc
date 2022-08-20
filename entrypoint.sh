@@ -1,9 +1,8 @@
 #!/bin/sh
 
 while true; do
-    echo "🔔  Docker was pruned everything older than $AGE and unused volumes !"
-        docker system prune --force --all --filter until=$AGE --filter label!=$STICKY_LABEL 
-        docker volume prune --force  
+    echo "🔔  Docker was pruned everything older than $AGE"
+        docker system prune --force --filter until=$AGE --filter label!=$STICKY_LABEL
     echo
     if [ -n "$SLEEP" ]; then
         echo "💤  Now sleep, next check in $SLEEP ..."
@@ -13,5 +12,3 @@ while true; do
         exit 0
     fi
 done
-
-

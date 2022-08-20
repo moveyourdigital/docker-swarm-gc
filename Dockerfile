@@ -1,12 +1,4 @@
-#
-# .∧＿∧ 
-# ( ･ω･｡)つ━☆・*。
-# ⊂  ノ    ・゜+.
-# しーＪ   °。+ *´¨)
-#          .· ´¸.·*´¨) ¸.·*¨)
-#           (¸.·´ (¸.·'* ☆ вжух, вжух и в продакшн
-#
 FROM docker:stable
-LABEL maintainer="Dmitry Malinin <dmitry@malinin.com>"
+LABEL maintainer="Move Your Digital <engineering@moveyourdigital.com>"
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
